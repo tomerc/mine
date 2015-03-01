@@ -6,7 +6,7 @@ import com.tomer.binary.tree.redblack.api.RedBlackTree;
 /**
  * @author Tomer Cohen
  */
-public class RedBlackTreeImpl<K extends Comparable, T> implements RedBlackTree<K, T> {
+public class RedBlackTreeImpl<K extends Comparable<K>, T> implements RedBlackTree<K, T> {
 
     private BinaryNode<K, T> root;
 

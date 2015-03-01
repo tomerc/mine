@@ -6,7 +6,7 @@ import com.tomer.binary.tree.node.api.MutableBinaryNode;
 /**
  * @author Tomer Cohen
  */
-public class BinaryNodeImpl<K extends Comparable, T> implements MutableBinaryNode<K, T> {
+public class BinaryNodeImpl<K extends Comparable<K>, T> implements MutableBinaryNode<K, T> {
 
     private final T value;
     private final K key;

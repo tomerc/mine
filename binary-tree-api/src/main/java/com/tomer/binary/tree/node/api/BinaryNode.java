@@ -3,7 +3,7 @@ package com.tomer.binary.tree.node.api;
 /**
  * @author Tomer Cohen
  */
-public interface BinaryNode<K extends Comparable, T> extends Node<K, T> {
+public interface BinaryNode<K extends Comparable<K>, T> extends Node<K, T> {
     BinaryNode<K, T> getParent();
 
     BinaryNode<K, T> getLeftNode();
