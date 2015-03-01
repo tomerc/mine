@@ -10,6 +10,9 @@
 
     <name>binary-tree-parent</name>
 
+    <prerequisites>
+        <maven>3.0.5</maven>
+    </prerequisites>
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -54,6 +57,7 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.2</version>
                     <configuration>
+                        <encoding>UTF-8</encoding>
                         <source>1.7</source>
                         <target>1.7</target>
                     </configuration>
@@ -79,9 +83,17 @@
                     <version>2.18.1</version>
                 </plugin>
                 <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>versions-maven-plugin</artifactId>
+                    <version>2.1</version>
+                </plugin>
+                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-resources-plugin</artifactId>
                     <version>2.7</version>
+                    <configuration>
+                        <encoding>UTF-8</encoding>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
