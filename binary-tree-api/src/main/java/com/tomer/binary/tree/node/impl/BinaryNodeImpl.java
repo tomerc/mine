@@ -73,4 +73,20 @@ public class BinaryNodeImpl<K extends Comparable, T> implements MutableBinaryNod
     public T getValue() {
         return value;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        BinaryNodeImpl<?, ?> that = (BinaryNodeImpl<?, ?>) o;
+
+        return key.equals(that.key);
+
+    }
+
+    @Override
+    public int hashCode() {
+        return key.hashCode();
+    }
 }
