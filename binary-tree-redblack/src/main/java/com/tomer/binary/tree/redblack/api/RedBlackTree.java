@@ -1,12 +1,12 @@
 package com.tomer.binary.tree.redblack.api;
 
-import com.tomer.binary.tree.node.api.BinaryNode;
+import com.tomer.binary.tree.redblack.node.RedBlackNode;
 
 /**
  * @author Tomer Cohen
  */
 public interface RedBlackTree<K extends Comparable<K>, T> {
-    void insert(BinaryNode<K, T> toInsert);
+    void insert(RedBlackNode<K, T> toInsert);
 
-    BinaryNode<K, T> getRoot();
+    RedBlackNode<K, T> getRoot();
 }

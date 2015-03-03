@@ -1,28 +1,30 @@
 package com.tomer.binary.tree.redblack.impl;
 
-import com.tomer.binary.tree.node.api.BinaryNode;
 import com.tomer.binary.tree.redblack.api.RedBlackTree;
+import com.tomer.binary.tree.redblack.node.RedBlackNode;
 
 /**
  * @author Tomer Cohen
  */
-public class RedBlackTreeImpl<K extends Comparable<K>, T> implements RedBlackTree<K, T> {
+public class RedBlackTreeImpl<T> implements RedBlackTree<Integer, T> {
 
-    private BinaryNode<K, T> root;
+    private RedBlackNode<Integer, T> root;
 
     public RedBlackTreeImpl() {
         this.root = null;
     }
 
     @Override
-    public void insert(BinaryNode<K, T> toInsert) {
+    public void insert(RedBlackNode<Integer, T> toInsert) {
         if (root == null) {
             root = toInsert;
+        } else {
+
         }
     }
 
     @Override
-    public BinaryNode<K, T> getRoot() {
+    public RedBlackNode<Integer, T> getRoot() {
         return root;
     }
 }

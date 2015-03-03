@@ -6,46 +6,46 @@ import com.tomer.binary.tree.node.api.MutableBinaryNode;
 /**
  * @author Tomer Cohen
  */
-public class BinaryNodeImpl<K extends Comparable<K>, T> implements MutableBinaryNode<K, T> {
+public class BinaryNodeImpl<T> implements MutableBinaryNode<Integer, T> {
 
     private final T value;
-    private final K key;
-    private BinaryNode<K, T> parent;
-    private BinaryNode<K, T> leftNode;
-    private BinaryNode<K, T> rightNode;
+    private final Integer key;
+    private BinaryNode<Integer, T> parent;
+    private BinaryNode<Integer, T> leftNode;
+    private BinaryNode<Integer, T> rightNode;
 
-    public BinaryNodeImpl(K key, T value) {
+    public BinaryNodeImpl(Integer key, T value) {
         this.value = value;
         this.key = key;
     }
 
     @Override
-    public void setParent(BinaryNode<K, T> parent) {
+    public void setParent(BinaryNode<Integer, T> parent) {
         this.parent = parent;
     }
 
     @Override
-    public void setLeftNode(BinaryNode<K, T> leftNode) {
+    public void setLeftNode(BinaryNode<Integer, T> leftNode) {
         this.leftNode = leftNode;
     }
 
     @Override
-    public void setRightNode(BinaryNode<K, T> rightNode) {
+    public void setRightNode(BinaryNode<Integer, T> rightNode) {
         this.rightNode = rightNode;
     }
 
     @Override
-    public BinaryNode<K, T> getParent() {
+    public BinaryNode<Integer, T> getParent() {
         return parent;
     }
 
     @Override
-    public BinaryNode<K, T> getLeftNode() {
+    public BinaryNode<Integer, T> getLeftNode() {
         return leftNode;
     }
 
     @Override
-    public BinaryNode<K, T> getRightNode() {
+    public BinaryNode<Integer, T> getRightNode() {
         return rightNode;
     }
 
@@ -60,12 +60,12 @@ public class BinaryNodeImpl<K extends Comparable<K>, T> implements MutableBinary
     }
 
     @Override
-    public MutableBinaryNode<K, T> toMutable() {
+    public MutableBinaryNode<Integer, T> toMutable() {
         return this;
     }
 
     @Override
-    public K getKey() {
+    public Integer getKey() {
         return key;
     }
 
@@ -79,7 +79,7 @@ public class BinaryNodeImpl<K extends Comparable<K>, T> implements MutableBinary
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        BinaryNodeImpl<?, ?> that = (BinaryNodeImpl<?, ?>) o;
+        BinaryNodeImpl<?> that = (BinaryNodeImpl<?>) o;
 
         return key.equals(that.key);
 
@@ -88,5 +88,14 @@ public class BinaryNodeImpl<K extends Comparable<K>, T> implements MutableBinary
     @Override
     public int hashCode() {
         return key.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("BinaryNodeImpl{");
+        sb.append("value=").append(value);
+        sb.append(", key=").append(key);
+        sb.append('}');
+        return sb.toString();
     }
 }
