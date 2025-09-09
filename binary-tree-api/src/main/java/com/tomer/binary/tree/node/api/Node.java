@@ -10,5 +10,5 @@ public interface Node<K extends Comparable<K>, T> {
 
     boolean isLeaf();
 
-    boolean isParent();
+    boolean isRoot();
 }
