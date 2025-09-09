@@ -202,8 +202,8 @@
       </plugin>
     </plugins>
   </build>
-  <subprojects>
-    <subproject>binary-tree-api</subproject>
-    <subproject>binary-tree-redblack</subproject>
-  </subprojects>
+  <modules>
+    <module>binary-tree-api</module>
+    <module>binary-tree-redblack</module>
+  </modules>
 </project>
