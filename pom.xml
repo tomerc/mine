@@ -4,7 +4,7 @@
 
     <groupId>com.tomer</groupId>
     <artifactId>binary-tree-parent</artifactId>
-    <version>1.0</version>
+    <version>1.0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>binary-tree-parent</name>
